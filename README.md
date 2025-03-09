@@ -1,36 +1,43 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# To Doodles 
+NextJSでToDoのコーディングテストプロジェクトです。
+多分思う通りで操作がそんなに複雑ではなくただに何数ToDo（もうちょっと面白いと思って「ToDoodles」にニックネームに）を作ったり探したりするアップリ何です。
+こちらのプロジェクトが**FE**の方です。
 
-## Getting Started
+## Overview
+このプロジェクトの主な目的は2つある：
+第一に、React/Typescriptアプリで自分のコーディング能力をテストすること。
+2つ目は、Reactにもっとなれるため、追加のプラグインや追加なしで完全なプロジェクトを書くという個人的な目標だ。
 
-First, run the development server:
+このプロジェクトには主に以下の機能があります：
+1. ToDo（ここからToDoodlesと呼ぶ）の作成と管理（タイトル、内容、関連タグを含む）
+2. 既存のToDoをステータスとタグに基づいてフィルタリングする
+3. Doodlesの目的をよりよく説明するためのタグの作成と管理
 
-```bash
+このプロジェクトには、ユーザー向けのコードとコンポーネントがすべて含まれています。
+
+
+## Technology
+### React/Nextjs, Typescript
+私の目標は、このプロジェクトをTypescript/Nextjsだけで書くことだったので、他のライブラリやプラグインは一切使わずに
+
+
+## Installation
+このリポジトリからプロジェクトファイルを取り出したら、必要なファイルをインストールします：
+npm install
+
+
+## Usage
+サーバーを起動するには、次のコマンドを使います：
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Lessons
+このプロジェクトは、クライアント・コンポーネントとサーバー・コンポーネントの使い方をよりよく学ぶのに役立った。
+最初はチャレンジとしてすべてをサーバー・コンポーネントとして書こうとしたのですが、最終的に時間がかかりすぎることに気づき、
+インタラクティブな部分の多くをクライアント・コンポーネントとして書き直しました。
+クライアント側でやったことのいくつかはサーバー側でも可能だとわかっているので
+（たとえば、[「Intercepting 」](https://nextjs.org/docs/app/building-your-application/routing/intercepting-routes)ルートと 「Parallel 」ルートを使ったモーダルなど）、後でもう一度チャレンジしてみたいと思っている。
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## TODO
+1. 既存のクライアント・コンポーネントをさらに発展させる。例えば、1つの 「button with modal」 コンポーネントで、プロジェクト内のいくつかの 「The」 コンポーネントを置き換えること
+2. 大掃除はまだできそう
