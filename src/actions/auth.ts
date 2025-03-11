@@ -34,7 +34,7 @@ export const login = async (email: string, password: string): Promise<any | Erro
   } else return new Error("User not found")
 }
 
-export const signup = async (name: string, email: string, pass: string): Promise<DoodleUser | Error> => {
+export const signup = async (name: string, email: string, pass: string): Promise<void> => {
   const url = `${baseUrl}/auth/signup`
   const body = JSON.stringify({ name: name, email: email, pass: pass })
 
@@ -46,8 +46,8 @@ export const signup = async (name: string, email: string, pass: string): Promise
     const cookieStore = await cookies()
     const newUser: DoodleUser = { id: resultId, userName: name, email: email }
     cookieStore.set(StoreEnum.user, JSON.stringify(newUser), {maxAge: 86400})
-    return newUser
-  } else return new Error("Signup failed")
+    redirect('/')
+  } else throw new Error("Signup failed")
 }
 
 export const logout = async () => {

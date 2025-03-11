@@ -190,7 +190,11 @@ a {
 
 .subtext { font-size: 80%; }
 .text-black { color: black; }
+.text-grey { color: grey; }
 .text-white { color: white; }
+.text-green { color: greenyellow; }
+.text-yellow { color: yellow; }
+.text-red { color: red; }
 .text-plain { text-decoration: none; }
 
 .scrollable { overflow-y: auto; }
